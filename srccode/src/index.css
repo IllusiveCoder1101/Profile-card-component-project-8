@@ -1,0 +1,122 @@
+*{
+  --color-primary-:hsl(185, 75%, 39%);
+  --color-secondary-:hsl(229, 23%, 23%);
+  --color-tertiary-:hsl(227, 10%, 46%);
+  --accent-color-:hsl(0, 0%, 59%);
+}
+@font-face {
+  font-family: "Kumbh-sans";
+  src: local("fonts") , url("./fonts/KumbhSans-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kumbh-sans-bold";
+  src: local("fonts") , url("./fonts/KumbhSans-Bold.ttf") format("truetype");
+}
+html{
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  font-size: 62.5%;
+  background-color:hsl(185, 75%, 39%) ;
+}
+.top{
+  margin-top:-50rem;
+  margin-left:-60rem;
+
+}
+.box{
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+.mid{
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  width:70%;
+  height:50%;
+  border-radius:1rem;
+  overflow:hidden;
+  background: white;
+}
+.header{
+  padding:7rem;
+  background-image: url("./assets/bg-pattern-card.svg");
+}
+.avatar{
+  border:0.5rem solid white;
+  border-radius:100%;
+  margin-top:-6.5rem;
+  align-self: center;
+}
+.bottom{
+  margin-left:10rem;
+  margin-top:-30rem;
+}
+.footer{
+  display:flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.about,.place{
+  text-align:center;
+}
+.about em,.no{
+  font-style: normal;
+  color:var(--color-secondary-);
+}
+.about{
+  color:var(--color-tertiary-);
+}
+.no,.about{
+  font-family:kumbh-sans-bold;
+
+}
+.tag,.place{
+  font-family:kumbh-sans;
+  color:var(--color-tertiary-);
+}
+@media screen and (min-width:768px) {
+  html{
+    font-size:100%;
+  }
+  .top{
+    margin-top:-27rem;
+    margin-left:15rem;
+  }
+  .bottom{
+    margin-left:10rem;
+    margin-top:10rem;
+
+  }
+  .header{
+    padding:5rem;
+  }
+  .avatar{
+    margin-top:-2rem;
+  }
+  .about,.no{
+    font-size:1rem;
+
+  }
+  .place,.tags{
+    font-size:0.7rem;
+  }
+  .place{
+    margin-top:-0.1rem;
+  }
+  .footer{
+    margin-top:-0.1rem;
+  }
+  .mid{
+    display:flex;
+    flex-direction: column;
+    width:45%;
+    height:60%;
+    border-radius:1rem;
+    overflow:hidden;
+    background: white;
+  }
+  
+}
