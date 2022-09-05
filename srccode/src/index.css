@@ -13,28 +13,27 @@
   src: local("fonts") , url("./fonts/KumbhSans-Bold.ttf") format("truetype");
 }
 html{
-  overflow:hidden;
-  width:100%;
-  height:100%;
+  background-image: url("./assets/bg-pattern-top.svg"),url("./assets/bg-pattern-bottom.svg");
+  background-position:-55rem -50rem ,20rem 20rem;
   font-size: 62.5%;
+  background-repeat:no-repeat;
   background-color:hsl(185, 75%, 39%) ;
 }
-.top{
-  margin-top:-50rem;
-  margin-left:-60rem;
 
-}
 .box{
-  overflow:hidden;
   display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100vh;
   align-items:center;
   justify-content: center;
 }
-.mid{
+
+.container{
   display:flex;
   flex-direction: column;
   position:absolute;
-  width:70%;
+  width:30rem;
   height:50%;
   border-radius:1rem;
   overflow:hidden;
@@ -50,10 +49,7 @@ html{
   margin-top:-6.5rem;
   align-self: center;
 }
-.bottom{
-  margin-left:10rem;
-  margin-top:-30rem;
-}
+
 .footer{
   display:flex;
   text-align: center;
@@ -77,18 +73,14 @@ html{
   font-family:kumbh-sans;
   color:var(--color-tertiary-);
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
   html{
     font-size:100%;
+    background-position:-20rem -40rem ,40rem 20rem;
   }
-  .top{
-    margin-top:-27rem;
-    margin-left:15rem;
-  }
-  .bottom{
-    margin-left:10rem;
-    margin-top:10rem;
-
+  .container{
+    width:30rem;
+    height:30rem;
   }
   .header{
     padding:5rem;
@@ -108,15 +100,6 @@ html{
   }
   .footer{
     margin-top:-0.1rem;
-  }
-  .mid{
-    display:flex;
-    flex-direction: column;
-    width:45%;
-    height:60%;
-    border-radius:1rem;
-    overflow:hidden;
-    background: white;
   }
   
 }
